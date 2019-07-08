@@ -18004,5 +18004,56 @@
       "ko": "Stardust Cotton Cloth"
     },
     "stars": 4
+  },
+  {
+    "baseLevel": 80,
+    "difficulty": 3943,
+    "durability": 80,
+    "id": "abcd",
+    "level": 430,
+    "maxQuality": 20287,
+    "name": {
+      "cn": "彗星棉布",
+      "de": "Dwarf",
+      "en": "Dwarfen Cotten Beret",
+      "fr": "ÉDwarfen Cotten Beret",
+      "ja": "コメDwarfen Cotten Beretットン",
+      "ko": "StardDwarfen Cotten Beretth"
+    },
+    "stars": 0
+  },
+  {
+    "baseLevel": 80,
+    "difficulty": 4143,
+    "durability": 70,
+    "id": "tested",
+    "level": 430,
+    "maxQuality": 21841,
+    "name": {
+      "cn": "Summer Indigo Shirt",
+      "de": "Summer Indigo Shirtrf",
+      "en": "Summer Indigo Shirt",
+      "fr": "ÉDSummer Indigo ShirtBeret",
+      "ja": "コメDwSummer Indigo Shirtetットン",
+      "ko": "StarSummer Indigo Shirtth"
+    },
+    "stars": 1
+  },
+  {
+    "baseLevel": 80,
+    "difficulty": 7457,
+    "durability": 70,
+    "id": "titania",
+    "level": 430,
+    "maxQuality": 10920,
+    "name": {
+      "cn": "Titania Barding",
+      "de": "Titania Bardingf",
+      "en": "Titania Barding Indigo Shirt",
+      "fr": "Titania Barding Indigo ShirtBeret",
+      "ja": "Titania Barding Indigo Shirtetットン",
+      "ko": "Titania Barding Indigo Shirtth"
+    },
+    "stars": 1
   }
 ]

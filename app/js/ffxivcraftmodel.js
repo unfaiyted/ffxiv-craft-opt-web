@@ -451,12 +451,12 @@ function ApplyModifiers(s, action, condition) {
         bProgressGain = 40;
     }
     else if (isActionEq(action, AllActions.pieceByPiece)) {
-        bProgressGain = (s.synth.recipe.difficulty - s.progressState) * 0.33;
+        bProgressGain = Math.min((s.synth.recipe.difficulty - s.progressState) * 0.33, 1000);
     }
 
     if (isActionEq(action, AllActions.muscleMemory)) {
         if (s.step == 1) {
-            bProgressGain = (s.synth.recipe.difficulty - s.progressState) * 0.33;
+            bProgressGain = Math.min((s.synth.recipe.difficulty - s.progressState) * 0.33, 1000);
         }
         else {
             bProgressGain = 0;
@@ -635,6 +635,7 @@ function ApplySpecialActionEffects(s, action, condition) {
         }
     }
 
+
     if (isActionEq(action, AllActions.specialtyReflect)) {
         if (AllActions.initialPreparations.shortName in s.effects.indefinites) {
             s.effects.countUps[AllActions.innerQuiet.shortName] += 3;
@@ -667,6 +668,14 @@ function ApplySpecialActionEffects(s, action, condition) {
     //         s.wastedActions += 1;
     //     }
     // }
+
+
+    if (isActionEq(action, AllActions.preparatoryTouch)) {
+        if (AllActions.initialPreparations.shortName in s.effects.indefinites) {
+            s.effects.countUps[AllActions.innerQuiet.shortName] += 1;
+        }
+    }
+
 
     if (s.step == 1 && s.synth.crafter.specialist && s.synth.crafter.level >= 70 && s.cpState > 0) {
         s.effects.indefinites[AllActions.strokeOfGenius.shortName] = true;
@@ -706,6 +715,9 @@ function UpdateEffectCounters(s, action, condition, successProbability) {
         // Increment inner quiet countups that have conditional requirements
         else if (isActionEq(action, AllActions.preciseTouch) && condition.checkGoodOrExcellent()) {
             s.effects.countUps[AllActions.innerQuiet.shortName] += 2 * successProbability * condition.pGoodOrExcellent();
+        }
+        else if (isActionEq(action, AllActions.preparatoryTouch)) {
+            s.effects.countUps[AllActions.innerQuiet.shortName] += 1;
         }
         else if (isActionEq(action, AllActions.byregotsMiracle)) {
             // Do nothing in the event that the conditions fo Byregot's Miracle are not met

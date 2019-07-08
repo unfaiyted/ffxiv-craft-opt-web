@@ -515,6 +515,24 @@ div[content*="xivdb"] div.tooltip-arrow {
 .icon.faded .cp {
   opacity: 0.4;
 }
+.icon:hover > .name {
+  padding-left: 3px;
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  margin-left: 2px;
+  left: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #ffffffe6;
+  width: 150px;
+  z-index: 100;
+}
+
+.icon > .name {
+  display: none;
+}
+
 
 .icon .class-icon {
   position: absolute;

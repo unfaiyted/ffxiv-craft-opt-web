@@ -92,7 +92,14 @@
     specialtyReflect: {        common: true,             skillID: {"Alchemist": 100281, "Armorer": 100277, "Blacksmith": 100276, "Carpenter": 100275, "Culinarian": 100282, "Goldsmith": 100278, "Leatherworker": 100279, "Weaver": 100280} },
     strokeOfGenius: {          common: true, buff: true, skillID: {"Alchemist": 50356, "Armorer": 50352, "Blacksmith": 50351, "Carpenter": 50350, "Culinarian": 50357, "Goldsmith": 50353, "Leatherworker": 50354, "Weaver": 50355} },
 
-    observe: {                 common: true,             skillID: {"Alchemist": 100099, "Armorer": 100040, "Blacksmith": 100023, "Carpenter": 100010, "Culinarian": 100113, "Goldsmith": 100082, "Leatherworker": 100053, "Weaver": 100070} }
+    observe: {                 common: true,             skillID: {"Alchemist": 100099, "Armorer": 100040, "Blacksmith": 100023, "Carpenter": 100010, "Culinarian": 100113, "Goldsmith": 100082, "Leatherworker": 100053, "Weaver": 100070} },
+
+    // Stormblood
+
+    intensiveSynthesis: { common: true, skillID: {"Alchemist": 100321, "Armorer": 100317, "Blacksmith": 100316, "Carpenter": 100315, "Culinarian": 100322, "Goldsmith": 100318, "Leatherworker": 100319, "Weaver": 100320}},
+    delicateSynthesis: { common: true,  skillID: {"Alchemist": 100099, "Armorer": 100040, "Blacksmith": 100023, "Carpenter": 100010, "Culinarian": 100113, "Goldsmith": 100082, "Leatherworker": 100053, "Weaver": 100070}},
+    rapidSynthesis3: { common: true,  skillID: {"Alchemist": 100099, "Armorer": 100040, "Blacksmith": 100023, "Carpenter": 100010, "Culinarian": 100113, "Goldsmith": 100082, "Leatherworker": 100053, "Weaver": 100070}},
+    preparatoryTouch: { common: true,  skillID: {"Alchemist": 100099, "Armorer": 100040, "Blacksmith": 100023, "Carpenter": 100010, "Culinarian": 100113, "Goldsmith": 100082, "Leatherworker": 100053, "Weaver": 100070}}
 
     // Reclaim is omitted because it has no bearing on the success of the result of the synthesis, as far as we care.
   };
@@ -121,9 +128,12 @@
         else {
           imagePaths[cls] = 'img/actions/' + action.cls + '/' + shortName + '.png';
         }
+
+        console.log(imagePaths);
         action.imagePaths = imagePaths;
       }
 
+      console.log(action);
       actionsByName[shortName] = action;
       allActions.push(action);
     }
@@ -135,12 +145,15 @@
       "basicSynth",
       "standardSynthesis",
       "flawlessSynthesis",
+      "delicateSynthesis",
       "carefulSynthesis",
       "carefulSynthesis2",
       "carefulSynthesis3",
+      "intensiveSynthesis",
       "pieceByPiece",
       "rapidSynthesis",
       "rapidSynthesis2",
+      "rapidSynthesis3",
       "focusedSynthesis",
       "muscleMemory",
       "brandOfEarth",
@@ -163,7 +176,8 @@
       "preciseTouch",
       "focusedTouch",
       "patientTouch",
-      "prudentTouch"
+      "prudentTouch",
+        "preparatoryTouch",
     ]
     },
     {

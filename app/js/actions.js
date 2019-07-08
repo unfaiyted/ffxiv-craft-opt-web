@@ -105,8 +105,19 @@ var AllActions = {
     specialtyRefurbish: new Action( 'specialtyRefurbish',   'Specialty: Refurbish',  0,      0,  1.0, 0.0, 0.0, 'immediate',   1,  'All',          70),
     specialtyReflect: new Action(   'specialtyReflect',     'Specialty: Reflect',    0,      0,  1.0, 0.0, 0.0, 'immediate',   1,  'All',          70),
     strokeOfGenius: new Action(     'strokeOfGenius',       'Stroke of Genius',      0,      0,  1.0, 0.0, 0.0, 'indefinite',  1,  'All',          70),
+//parameters: shortName,  name, durabilityCost, cpCost, successProbability, qualityIncreaseMultiplier, progressIncreaseMultiplier, aType, activeTurns, cls, level,onGood, onExcl, onPoor
+    //                              shortName,              fullName,              dur,     cp, Prob, QIM, PIM, Type,          t,  cls,           lvl,  onGood,     onExcl,     onPoor
+    // Shadowbringers actions
+ // trainedInstinct: new Action(     'trainedInstinct',     'Trained Instinct',      0,    250,  1.0, 0.3, 0.0, 'immediate',   1,  'All',          80),
+ // trainedEye: new Action(          'trainedEye',          'Trained Eye',           0,    250,  1.0, 0.5, 0.0, 'immediate',   1,  'All',          80),
+    preparatoryTouch: new Action(    'preparatoryTouch',    'Preparatory Touch',     20,    36,  0.7, 0.0, 2.0, 'immediate',   1,  'All',          71),
+    intensiveSynthesis: new Action(  'intensiveSynthesis',  'Intensive Synthesis',   10,    12,  0.8, 0.0, 3.0, 'immediate',   1,  'All',          78,  true,     true),
+    delicateSynthesis: new Action(   'delicateSynthesis',   'Delicate Synthesis',    10,    12,  1.0, 1.0, 1.0, 'immediate',   1,  'All',          76),
+    rapidSynthesis3: new Action(     'rapidSynthesis3',     'Rapid Synthesis III',   20,    24,  0.6, 0.0, 6.0, 'immediate',   1,  'All',          72),
 
     // Special Actions - not selectable
     finishingTouches: new Action(   'finishingTouches',     'Finishing Touches',    10,      0,  0.5, 0.0, 2.0, 'immediate',   1,  'All',          55),
     dummyAction: new Action(        'dummyAction',          '______________',        0,      0,  1.0, 0.0, 0.0, 'immediate',   1,  'All',           1)
+
+
 };

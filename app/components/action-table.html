@@ -6,15 +6,13 @@
           class="image-wrap glossy icon"
           ng-class="cssClassesForAction(action)"
           lvl-draggable="{{draggable}}"
-          data-new-action="{{action}}"
-          tooltip-html-unsafe="{{actionTooltips[action]}}"
-          tooltip-placement="{{tooltipPlacement}}"
-          tooltip-popup-delay="1000"
-          tooltip-append-to-body="true">
-      <img ng-src="{{getActionImagePath(action, cls)}}"/>
+          data-new-action="{{action}}">
+      <img ng-src="{{getActionImagePath(action, cls)}}" alt="{{actionForName(action).name}}"/>
       <span ng-if="actionForName(action).cpCost" class="cp">{{actionForName(action).cpCost}}</span>
+      <span ng-if="actionForName(action).name" class="name">{{actionForName(action).name}}</span>
+
       <span ng-if="iActionClassSpecific(action)" class="class-icon">
-        <img ng-src="img/classes/{{actionForName(action).cls}}.png"/>
+        <img ng-src="img/classes/{{actionForName(action).cls}}.png" alt="{{actionForName(action).fullName}}"/>
       </span>
     </div>
   </div>
