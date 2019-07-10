@@ -647,13 +647,11 @@ function ApplySpecialActionEffects(s, action, condition) {
     //     }
     // }
 
-
-    if (isActionEq(action, AllActions.preparatoryTouch)) {
-        if (AllActions.initialPreparations.shortName in s.effects.indefinites) {
-            s.effects.countUps[AllActions.innerQuiet.shortName] += 1;
-        }
-    }
-
+    // if (isActionEq(action, AllActions.preparatoryTouch)) {
+    //     if (AllActions.initialPreparations.shortName in s.effects.indefinites) {
+    //         s.effects.countUps[AllActions.innerQuiet.shortName] += 1;
+    //     }
+    // }
 
     if (s.step == 1 && s.synth.crafter.specialist && s.synth.crafter.level >= 70 && s.cpState > 0) {
         s.effects.indefinites[AllActions.strokeOfGenius.shortName] = true;
@@ -1958,7 +1956,17 @@ var LevelTable = {
     67: 282,
     68: 285,
     69: 288,
-    70: 290 
+    70: 290,
+    71: 390,
+    72: 395,
+    73: 400,
+    74: 403,
+    75: 406,
+    76: 409,
+    77: 412,
+    78: 415,
+    79: 418,
+    80: 430,
 };
 
 var Ing1RecipeLevelTable = {
@@ -2007,6 +2015,7 @@ var Ing1RecipeLevelTable = {
     300: 291,   // 70_1star
     320: 292,   // 70_2star
     350: 293,   // 70_3star
+
 };
 
 var Ing2RecipeLevelTable = {
