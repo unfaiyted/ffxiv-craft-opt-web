@@ -110,7 +110,7 @@ var AllActions = {
     // Shadowbringers actions
  // trainedInstinct: new Action(     'trainedInstinct',     'Trained Instinct',      0,    250,  1.0, 0.3, 0.0, 'immediate',   1,  'All',          80),
  // trainedEye: new Action(          'trainedEye',          'Trained Eye',           0,    250,  1.0, 0.5, 0.0, 'immediate',   1,  'All',          80),
-    preparatoryTouch: new Action(    'preparatoryTouch',    'Preparatory Touch',     20,    36,  0.7, 0.0, 2.0, 'immediate',   1,  'All',          71),
+    preparatoryTouch: new Action(    'preparatoryTouch',    'Preparatory Touch',     20,    36,  0.7, 2.0, 0.0, 'immediate',   1,  'All',          71),
     intensiveSynthesis: new Action(  'intensiveSynthesis',  'Intensive Synthesis',   10,    12,  0.8, 0.0, 3.0, 'immediate',   1,  'All',          78,  true,     true),
     delicateSynthesis: new Action(   'delicateSynthesis',   'Delicate Synthesis',    10,    12,  1.0, 1.0, 1.0, 'immediate',   1,  'All',          76),
     rapidSynthesis3: new Action(     'rapidSynthesis3',     'Rapid Synthesis III',   20,    24,  0.6, 0.0, 6.0, 'immediate',   1,  'All',          72),
